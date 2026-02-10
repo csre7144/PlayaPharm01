@@ -368,7 +368,7 @@ h6,
         order: 2;
     }
     .text-col {
-        text-align: center;
+        /* text-align: center; */
         padding: 20px !important;
     }
 }
