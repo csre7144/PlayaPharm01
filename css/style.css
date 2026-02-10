@@ -349,3 +349,27 @@ h6,
         padding-left: 20px;
     }
 }
+
+.banner-row {
+    display: flex;
+}
+
+/* Mobile only — Image first, Text after */
+@media (max-width: 991px) {
+    .banner-row {
+        flex-direction: column;
+    }
+
+    .banner-row .image-col {
+        order: 1;
+    }
+
+    .banner-row .text-col {
+        order: 2;
+    }
+    .text-col {
+        text-align: center;
+        padding: 20px !important;
+    }
+}
+
