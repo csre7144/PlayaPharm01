@@ -339,3 +339,13 @@ h6,
 .provider_pg{
     background-color: #eaf2fb;
 }
+
+.quick-links-padding {
+    padding-left: 60px;
+}
+
+@media (max-width: 576px) {
+    .quick-links-padding {
+        padding-left: 20px;
+    }
+}
