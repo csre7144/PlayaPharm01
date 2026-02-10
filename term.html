@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Playa Pharmacy</title>
+    <title>Playa Pharmacy - Term and Conditions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -27,111 +27,6 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <style>
-        /* contact */
-    .contactpage{
-        height: auto;
-        position: relative;
-        overflow: hidden;
-    }
-    .contactpage img{
-        position: absolute;
-        top: 75px;
-        left: 0;
-        width: 380px;
-    }
-    .contactpf{
-        padding-left: 350px;
-        padding-right: 50px;
-    }
-
-    .faq-container {
-    max-width: 1000px;
-    margin: 50px auto 0;
-    padding: 20px;
-    flex: 1;
-    }
-    .accordion-button {
-        background-color: #ffffff;
-        color: #333;
-        border: none;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        font-size: 20px;
-    }
-    .accordion-button:not(.collapsed) {
-        background-color: #085371;
-        color: white;
-        font-size: 20px;
-    }
-    .accordion-button:focus {
-        box-shadow: 0 0 0 0.2rem rgba(35, 34, 138, 0.25);
-    }
-    .accordion-body {
-        background-color: #f8f9fa;
-        border-left: 4px solid #008037;
-        animation: slideDown 0.3s ease-out;
-    }
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .faq-icon {
-        margin-right: 10px;
-        color: #edbe00;
-    }
-    .accordion-item {
-        margin-bottom: 10px;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    /* contact */
-.contactpage{
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-.contactpage img{
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 380px;
-}
-.contactpf{
-    padding-left: 350px;
-    padding-right: 50px;
-}
-
-/* Hide image on screens smaller than 768px (phones) */
-@media (max-width: 900px) {
-    .contactpage img {
-        display: none;
-    }
-
-    .contactpf {
-        padding-left: 20px; /* Remove left padding on mobile */
-        padding-right: 20px; /* Optional: adjust for smaller screens */
-    }
-    .contactpage{
-    height: auto;
-    }
-}
-
-/* @media (min-width: 700px) {
-    .contactpage{
-    height: auto;
-    }
-} */
-
-/* end contact */
-    </style>
 </head>
 
 <body>
@@ -155,16 +50,16 @@
         <div class="row gx-0">
             <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small class="py-2" style="color: black; font-weight: bold; font-size: 18px;"><i class="far fa-clock me-2" style="color: #085371;"></i>Opening Hours: Monday to Friday : 9am - 6.30pm, Saturday : 9am to 3pm, <span style="color: red;">Sunday Closed</span> </small>
+                    <small class="py-2" style="color: black; font-weight: bold;"><i class="far fa-clock me-2" style="color: #085371;"></i>Opening Hours: Monday to Friday : 9am - 6.30pm, Saturday : 9am to 3pm, <span style="color: red;">Sunday Closed</span> </small>
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-end">
                 <div class="position-relative d-inline-flex align-items-center text-white top-shape px-5" style="background-color: #085371;">
                     <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0" style="font-size: 18px;"><i class="fa fa-envelope-open me-2" ></i>info@playapharmacy.com</p>
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@playapharmacy.com</p>
                     </div>
                     <div class="py-2">
-                        <p class="m-0" style="font-size: 18px;"><i class="fa fa-phone-alt me-2" ></i>+1 (310) 823-4500</p>
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+1 (310) 823-4500</p>
                     </div>
                 </div>
             </div>
@@ -185,10 +80,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
                 <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
-                <a href="compounding.html" class="nav-item nav-link" > Compounding</a>
+                <!-- <a href="compounding.html" class="nav-item nav-link" > Compounding</a> -->
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >About</button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item active" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item" href="compounding.html">About Compounding</a></li>
+                </ul>
             </div>
             <div class="dropdown">
                 <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >Specialties</button>
@@ -205,14 +107,34 @@
                     <li><a class="dropdown-item" href="additional_expertise.html">Additional Expertise</a></li>
                 </ul>
             </div>
-            <!-- <a href="#" class="btn py-2 px-4 ms-3">Contact Us</a> -->
+            
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link">Provider</a>
+                <a href="contact2.html" class="nav-item nav-link">Contact Us</a>
+                <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
+                <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
+                <!-- <a href="compounding.html" class="nav-item nav-link" > Compounding</a> -->
+            </div>
+            <a href="transfer.html" class="btn py-2 px-4 ms-3">Transfer Rx</a>
             <!-- <button type="button" class="btn py-2 px-4 ms-3" data-toggle="modal" data-target="#myModal"> Contact Us</button> -->
-            <button type="button" class="btn py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</button>
+            <!-- <button type="button" class="btn py-2 px-4 ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Us</button> -->
             
         </div>
     </nav>
     <!-- Navbar End -->
 
+    <!-- Hero Start -->
+    <div class="container-fluid py-1 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Terms and Conditions </h1>
+                <!-- <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">About</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -251,12 +173,97 @@
     </div>
     <!-- End Modal Contact info -->
 
-    
-   
+
+
+    <!-- About Start -->
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <!-- <h1 class="display-5 mb-0 pb-5">Our Story</h1> -->
+            <div class="row">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Messaging Terms & Conditions</h4>
+                    </div>
+                    <!-- <h4 class="text-body fst-italic mb-4">o	Locally owned and run.</h4> -->
+                    <p class="mb-4" style="font-size: 20px;">Playa Pharmacy | 8131 W. Manchester Ave. Playa Del Rey, CA 90293
+
+
+                    </p>
+                </div>
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">General</h4>
+                    </div>
+                    <!-- <h4 class="text-body fst-italic mb-4">o	Locally owned and run.</h4> -->
+                    <p class="mb-4" style="font-size: 20px;">When you opt-in to the service, we will send you a message to confirm your signup
+                        <br><br>
+                    By opting into messages, you agree to receive recurring automated marketing and informational text messages from Byers Pharmacy. Automated messages may be sent using an automatic telephone dialing system to the mobile telephone number you provided when signing up or any other number that you designate.
+                        <br><br>
+                    Message frequency varies, and additional mobile messages may be sent periodically based on your interaction with Byers Pharmacy. Byers Pharmacy reserves the right to alter the frequency of messages sent at any time to increase or decrease the total number of sent messages. Byers Pharmacy also reserves the right to change the short code or phone number or alphanumeric sender where messages are sent
+                        <br><br>
+                    Your usual message and data rates may apply. If you have any questions about your text plan or data plan, it is best to contact your mobile provider. Your mobile provider is not liable for delayed or undelivered messages.
+                        <br><br>
+                    Your consent to receive marketing messages is not a condition of purchase.
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Carriers</h4>
+                    </div>
+                    <!-- <h4 class="text-body fst-italic mb-4">o	Locally owned and run.</h4> -->
+                    <p class="mb-4" style="font-size: 20px;">Carriers are not liable for delayed or undelivered messages.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Cancellation</h4>
+                    </div>
+                    <!-- <h4 class="text-body fst-italic mb-4">o	Locally owned and run.</h4> -->
+                    <p class="mb-4" style="font-size: 20px;">Messages will provide instructions to unsubscribe either by texting STOP or through an included link. After you unsubscribe, we will send you a message to confirm that you have been unsubscribed and no more messages will be sent. If you would like to receive messages from Byers Pharmacy again, just sign up as you did the first time and Byers Pharmacy will start sending messages to you again.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Info</h4>
+                    </div>
+                    <!-- <h4 class="text-body fst-italic mb-4">o	Locally owned and run.</h4> -->
+                    <p class="mb-4" style="font-size: 20px;">For support regarding our services, email us at dme@byerspharmacy.com or, if supported, text "HELP" to +1 (813) 966-3195 at any time and we will respond with instructions on how to unsubscribe. If we include a link in messages we send you from Byers Pharmacy, you may also access instructions on how to unsubscribe and our company information by following that link.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 >Transfer of Number</h4>
+                        <p class="mb-4" style="font-size: 20px;">You agree that before changing your mobile number or transferring your mobile number to another individual, you will either reply "STOP" from the original number or notify us of your old number at dme@byerspharmacy.com. The duty to inform us based on the above events is a condition of using this service to receive messages.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Privacy</h4>
+                        <p class="mb-4" style="font-size: 20px;">If you have any questions about your data or our privacy practices, please visit our </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title mb-4">
+                        <!-- <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5> -->
+                        <h4 class=" mb-0">Messaging Terms Changes</h4>
+                        <p class="mb-4" style="font-size: 20px;">We reserve the right to change or terminate our messaging program at any time. We also reserve the right to update these Messaging Terms at any time. Such changes will be effective immediately upon posting. If you do not agree to a change to these Messaging Terms, you should cancel your enrolment with our messaging program. Your continued enrollment following such changes shall constitute your acceptance of such changes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer Start -->
-    <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px; background-color: #085371;">
+    <div class="container-fluid text-light mt-2 py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px; background-color: #085371;">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
                 <div class="col-lg-4 col-md-6">

@@ -6,6 +6,7 @@
     --dark: #091E3E;
 }
 
+
 h1,
 h2,
 .font-weight-bold {
@@ -25,10 +26,10 @@ h6,
 }
 
 .btn {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: .5s;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .btn-primary,
@@ -116,9 +117,9 @@ h6,
 }
 
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 35px 8px;
-    font-size: 25px;
+    font-size: 22px;
     color: #085371;
     outline: none;
     transition: .5s;
@@ -171,6 +172,11 @@ h6,
     width: 3rem;
     height: 3rem;
 }
+
+.banner_bg_p{
+    padding: 40px;
+}
+
 
 .section-title h5::before {
     position: absolute;
@@ -233,8 +239,8 @@ h6,
     border: none;
     background-color: white;
     color: #085371;
-    font-weight: bold;
-    font-size: 25px;
+    /* font-weight: bold; */
+    font-size: 22px;
 }
 .dropdown .dropdown-toggle:hover {
     color: #008037;
@@ -248,7 +254,7 @@ h6,
 }
 
 .img_footer{
-    max-width: 75%;
+    max-width: 100%;
     height: auto;
 }
 .ft_social {
@@ -262,7 +268,7 @@ h6,
 }
 
 .banner_pg img{
-        background-position: center center;
+    background-position: center center;
     background-size: cover;
     height: 600px;
     width: 100%;
@@ -322,4 +328,7 @@ h6,
     /* width: 100%; */
     height: 100%;
     /* object-fit: cover; */
+}
+.provider_pg{
+    background-color: #eaf2fb;
 }
