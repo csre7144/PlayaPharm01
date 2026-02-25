@@ -370,7 +370,7 @@ h6,
     min-height: 600px;
 }
 .banner-row .image-col .slide_img_2{
-    background-image: url('../img/banner/slide-5.png');
+    background-image: url('../img/carousel-3.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -385,6 +385,7 @@ h6,
     
     }
 }
+
 
 
 
@@ -409,4 +410,14 @@ h6,
 .banner-row .text-col {
     padding: 40px;
     
+}
+
+.compound_about button{
+    margin-bottom: 50px;
+}
+
+.compound_about .compound_about_paragraph{
+    font-size: 20px;
+    text-align: justify;
+    padding-right: 60px;
 }

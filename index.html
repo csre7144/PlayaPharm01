@@ -29,6 +29,92 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+
+    /* Slow down carousel slide animation */
+    .carousel-item {
+        transition: transform 1.2s ease-in-out;
+    }
+
+    /* Slider */
+    .related-scroll {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: auto; /* NO smooth scroll */
+    }
+
+    .related-scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .related-scroll a {
+        font-size: 18px;
+    }
+    .related-scroll a:hover {
+        color: #008037;
+    }
+
+    .related-card {
+        min-width: 320px;
+        height: 180px;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #fff;
+        flex-shrink: 0;
+    }
+
+    .related-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .related-scroll {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    }
+    .related-scroll::-webkit-scrollbar {
+        display: none; /* Chrome, Safari */
+    }
+
+    /* Arrow buttons */
+    .scroll-btn {
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .scroll-btn.left {
+        left: -10px;
+        background-color: #085371;
+        color: white;
+    }
+    .scroll-btn.left:hover {
+        background: #008037;
+        color: white;
+    }
+
+    .scroll-btn.right {
+        right: -10px;
+        background-color: #085371;
+        color: white;
+    }
+    .scroll-btn.scroll-btn.right:hover {
+        background: #008037;
+        color: white;
+    }
+
+    .scroll-btn:hover {
+        background: #fff;
+    }
+
+
         /* contact */
     .contactpage{
         height: auto;
@@ -275,13 +361,65 @@
             <div id="carouselExampleIndicators"
                 class="carousel slide"
                 data-bs-ride="carousel"
-                data-bs-interval="3000"
+                data-bs-interval="7000"
                 data-bs-pause="false">
 
                 <div class="carousel-inner">
+                    <!-- Slide 2 -->
+                    <div class="carousel-item active">
+                        <div class="banner_pg">
+                            <div class="row banner-row">
+
+                                <div class="col-lg-6 col-md-12 p-5 text-col">
+                                    <div class="section-title mb-4">
+                                        <h1 class="display-5 mb-0" style="color:#085371;">
+                                            One Place For All Your Compounding Needs.
+                                        </h1>
+                                    </div>
+
+                                    <h4 class="text-body mb-5">
+                                         Your health is unique - and your medications should be too. When Standard options aren't suitable, we create personalized formulaitons designed around your comfort, safety, and treatment goals.
+                                    </h4>
+
+                                    <h4 class="mb-3">
+                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
+                                        Doctor Prescribed Custom Medications
+                                    </h4>
+                                    <h4 class="mb-3">
+                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
+                                        Tailored Strengths & Dosage Forms
+                                    </h4>
+                                    <h4 class="mb-3">
+                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
+                                        Patient-Centric Formulations
+                                    </h4>
+                                     <h4 class="mb-3">
+                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
+                                        Quality & Safety Standards
+                                    </h4>
+                                </div>
+                                <div class="col-lg-6 col-md-12 ">
+                                    <div class="image-col">
+                                        <div class="slide_img_2"></div>
+                                    </div>
+                                    <!-- <img class="img-fluid rounded wow zoomIn"
+                                        data-wow-delay="0.9s"
+                                        src="img/banner/slider0001.jpg"> -->
+                                    
+                                </div>
+                                
+                                <!-- <div class="col-lg-6 col-md-12 image-col">
+                                    <img class="img-fluid rounded wow zoomIn"
+                                        data-wow-delay="0.9s"
+                                        src="img/banner/banner232.jpg">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
 
                     <!-- Slide 1 -->
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <div class="banner_pg">
                             <div class="row banner-row">
 
@@ -294,9 +432,7 @@
                                     </div>
 
                                     <h4 class="text-body mb-5">
-                                        We are a locally owned and operated pharmacy offering brand-name,
-                                        generic, and custom-compounded medications. We provide personalized
-                                        pharmacy care you can trust.
+                                        Playa Pharmacy is an award-winning, family-owned pharmacy in the heart of Playa del Rey - where personalized care isn't a promise on a poster. It's what happens every time you walk through the door.
                                     </h4>
 
                                     <h4 class="mb-3">
@@ -328,57 +464,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <div class="banner_pg">
-                            <div class="row banner-row">
-
-                                <div class="col-lg-6 col-md-12 p-5 text-col">
-                                    <div class="section-title mb-4">
-                                        <h1 class="display-5 mb-0" style="color:#085371;">
-                                            People you know by Name. Price that keep you in the game.
-                                        </h1>
-                                    </div>
-
-                                    <p style="font-size:1.5rem;">
-                                        <b>Playa Pharmacy is the cure for the common pharmacy.</b>
-                                        Friendly faces, honest prices, and personalized care —
-                                        <b>our price is always the low price, guaranteed.</b>
-                                    </p>
-
-                                    <h4 class="mb-3">
-                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
-                                        One to One, Personalized Service
-                                    </h4>
-                                    <h4 class="mb-3">
-                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
-                                        Free Consultations, Local Delivery
-                                    </h4>
-                                    <h4 class="mb-3">
-                                        <i class="fa fa-check-circle me-3" style="color:#008037;"></i>
-                                        Fast Turnaround, Wide Selection
-                                    </h4>
-                                </div>
-                                <div class="col-lg-6 col-md-12 ">
-                                    <div class="image-col">
-                                        <div class="slide_img_2"></div>
-                                    </div>
-                                    <!-- <img class="img-fluid rounded wow zoomIn"
-                                        data-wow-delay="0.9s"
-                                        src="img/banner/slider0001.jpg"> -->
-                                    
-                                </div>
-                                
-                                <!-- <div class="col-lg-6 col-md-12 image-col">
-                                    <img class="img-fluid rounded wow zoomIn"
-                                        data-wow-delay="0.9s"
-                                        src="img/banner/banner232.jpg">
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
                 <!-- Controls -->
@@ -398,6 +483,198 @@
         </div>
         <!-- End Slider -->
 
+    <!-- Service Start -->
+    <!-- <div class="container-fluid m-2 pb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+            <div class="row mb-5">
+                    <div class="section-title">
+                        <h1 class="position-relative text-uppercase" style="color: #085371; display: block; text-align: center;">Our Compounding Services</h1>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/pain_22.jpg" alt="img2" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4">
+                                <h4 class="m-1">Pain Management</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Hormone222.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Hormone Therapy</h4>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/sleep_aids2.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Sleep Aids</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/weight_management.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Weight Management</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Pet Medicine.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Pet Medicine</h4>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Nutriceuticals.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Nutriceuticals</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Adrendal Fatigue.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Adrendal Fatigue</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Dermatology.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Dermatology</h4>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> -->
+    <!-- Service End -->
+
+
+    <div class="container-fluid m-2 pt-4 pb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container position-relative">
+            
+            <div class="section-title mb-5">
+                <h1 class="position-relative" style="color: #085371; display: block; text-align: center;">Our Compounding Services</h1>
+                <!-- <p class="text-center m-2">Custom Soultions for Your Health</p> -->
+            </div>
+            <!-- Left Arrow -->
+            <button class="scroll-btn left" onclick="scrollRelated(-4)">
+                &#10094;
+            </button>
+
+            <!-- Right Arrow -->
+            <button class="scroll-btn right" onclick="scrollRelated(4)">
+                &#10095;
+            </button>
+
+            <div id="relatedScroll" class="related-scroll d-flex gap-3">
+                <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/pain_22.jpg" alt="img2" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4">
+                                <h4 class="m-1">Pain Management</h4>
+                                <a href="Pain_Management.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Before you checkout, you can trust that we’ve checked-into any applicable discounts or credits. The difference can save you big dollars.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Hormone222.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Hormone Therapy</h4>
+                                <a href="hormone.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/sleep_aids2.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Sleep Aids</h4>
+                                <a href="sleep_aids.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/weight_management.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Weight Management</h4>
+                                <a href="weight_management.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Pet Medicine.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Pet Medicine</h4>
+                                <a href="pet_medicine.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Nutriceuticals.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Nutriceuticals</h4>
+                                <a href="nutriceuticals.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Adrendal Fatigue.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Adrendal Fatigue</h4>
+                                <a href="adrenal_fatigue.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="img/list_compounding/Dermatology.jpg" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 100%">
+                            </div>
+                            <div class="position-relative bg-light rounded-bottom text-center p-4" >
+                                <h4 class="m-1">Dermatology</h4>
+                                <a href="dermatology.html">Learn More</a>
+                                <!-- <p style="font-size: 22px;">Questions or concerns? Our pharmacists are always ready to help!</p> -->
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <!-- Service Start -->
@@ -412,7 +689,7 @@
                         <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
                             <div class="rounded-top overflow-hidden">
                                 <!-- <img class="img-fluid" src="img/icon/111.png" alt=""> -->
-                                 <img src="img/icon/be1.png" alt="img1" class="img-fluid mx-auto d-block" style="max-width: 200px;">
+                                 <img src="img/icon/free_delivery.jpg" alt="img1" class="img-fluid mx-auto d-block">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4" style="min-height: 295px;">
                                 <h3 class="m-3">Free Delivery</h3>
@@ -421,7 +698,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                             <div class="rounded-top overflow-hidden">
-                                <img src="img/icon/be3.png" alt="img2" class="img-fluid mx-auto d-block" style="max-width: 200px;">
+                                <img src="img/icon/our_support_your_savings22.jpg" alt="img2" class="img-fluid mx-auto d-block">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4">
                                 <h3 class="m-3">Our Support, Your Savings</h3>
@@ -430,7 +707,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
                             <div class="rounded-top overflow-hidden">
-                                <img src="img/icon/be2.png" alt="Teamwork" class="img-fluid mx-auto d-block" style="max-width: 200px;">
+                                <img src="img/icon/ask_pharmacist.jpg" alt="Teamwork" class="img-fluid mx-auto d-block">
                             </div>
                             <div class="position-relative bg-light rounded-bottom text-center p-4" style="min-height: 295px;">
                                 <h3 class="m-3">Ask a Pharmacist</h3>
@@ -741,6 +1018,55 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+    <script>
+    function scrollRelated(direction) {
+        const container = document.getElementById("relatedScroll");
+        const scrollAmount = 350; // move per click
+        container.scrollLeft += direction * scrollAmount;
+
+    }
+    </script>
+    <script>
+        const relatedScroll = document.getElementById('relatedScroll');
+
+        let autoScrollInterval;
+        const scrollAmount = 300;   // px per move
+        const speed = 3000;         // autoplay delay (ms)
+
+        function scrollRelated(direction) {
+            relatedScroll.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                // If reached end → go back to start
+                if (
+                    relatedScroll.scrollLeft + relatedScroll.clientWidth >=
+                    relatedScroll.scrollWidth
+                ) {
+                    relatedScroll.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    scrollRelated(4);
+                }
+            }, speed);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        // Start autoplay
+        startAutoScroll();
+
+        // Pause on hover (important UX)
+        relatedScroll.addEventListener('mouseenter', stopAutoScroll);
+        relatedScroll.addEventListener('mouseleave', startAutoScroll);
+    </script>
     
 
 </body>
