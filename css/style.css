@@ -416,8 +416,58 @@ h6,
     margin-bottom: 50px;
 }
 
-.compound_about .compound_about_paragraph{
+/* .compound_about .compound_about_paragraph{
     font-size: 20px;
     text-align: justify;
     padding-right: 60px;
+} */
+
+/* Default (Desktop & Tablet) */
+.compound_about .compound_about_paragraph {
+    font-size: 20px;
+    text-align: justify;
+    padding-right: 60px;
+    line-height: 1.6;
+}
+
+
+/* Tablet screens (≤ 992px) */
+@media (max-width: 992px) {
+    .compound_about .compound_about_paragraph {
+        padding-right: 30px;
+        font-size: 18px;
+    }
+    .compound_about .compound_about_paragraph img{
+        padding-bottom: 20px;
+    }
+}
+
+/* Mobile screens (≤ 768px) */
+@media (max-width: 768px) {
+    .compound_about .compound_about_paragraph {
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 18px;
+        text-align: left; /* better readability on mobile */
+    }
+
+    .compound_about button {
+        width: 100%;
+        text-align: center;
+    }
+    .compound_about .compound_about_paragraph img{
+        padding-bottom: 20px;
+    }
+}
+
+/* Small mobile screens (≤ 576px) */
+@media (max-width: 576px) {
+    .compound_about .compound_about_paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+    .compound_about img{
+        padding-bottom: 20px;
+    }
 }

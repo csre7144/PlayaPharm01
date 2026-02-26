@@ -38,8 +38,8 @@
     /* Slider */
     .related-scroll {
     overflow-x: auto;
-    padding-bottom: 10px;
-    scroll-behavior: auto; /* NO smooth scroll */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     }
 
     .related-scroll::-webkit-scrollbar {
@@ -67,9 +67,9 @@
         object-fit: cover;
     }
     .related-scroll {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Firefox */
     }
     .related-scroll::-webkit-scrollbar {
         display: none; /* Chrome, Safari */
@@ -572,6 +572,7 @@
     <!-- Service End -->
 
 
+    <!-- clickable slider -->
     <div class="container-fluid m-2 pt-4 pb-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container position-relative">
             
@@ -673,6 +674,7 @@
             </div>
         </div>
     </div>
+    <!-- End clickable slider -->
 
 
 
@@ -1021,39 +1023,39 @@
 
 
     <script>
-    function scrollRelated(direction) {
-        const container = document.getElementById("relatedScroll");
-        const scrollAmount = 350; // move per click
-        container.scrollLeft += direction * scrollAmount;
-
-    }
-    </script>
-    <script>
         const relatedScroll = document.getElementById('relatedScroll');
-
         let autoScrollInterval;
-        const scrollAmount = 300;   // px per move
-        const speed = 3000;         // autoplay delay (ms)
 
+        function getCardWidth() {
+            const card = relatedScroll.querySelector('.service-item');
+            const gap = 12; // gap-3 ≈ 12px
+            return card.offsetWidth + gap;
+        }
+
+        // Scroll exactly 4 cards
         function scrollRelated(direction) {
+            const cardWidth = getCardWidth();
+            const scrollDistance = cardWidth * 4;
+
             relatedScroll.scrollBy({
-                left: direction * scrollAmount,
+                left: direction * scrollDistance,
                 behavior: 'smooth'
             });
         }
 
+        // Slow autoplay (every 6 seconds)
         function startAutoScroll() {
             autoScrollInterval = setInterval(() => {
-                // If reached end → go back to start
                 if (
                     relatedScroll.scrollLeft + relatedScroll.clientWidth >=
-                    relatedScroll.scrollWidth
+                    relatedScroll.scrollWidth - 10
                 ) {
+                    // Reset smoothly to start
                     relatedScroll.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    scrollRelated(4);
+                    scrollRelated(1);
                 }
-            }, speed);
+            }, 5000); // ⏳ slower autoplay (5s)
         }
 
         function stopAutoScroll() {
@@ -1063,7 +1065,7 @@
         // Start autoplay
         startAutoScroll();
 
-        // Pause on hover (important UX)
+        // Pause autoplay on hover
         relatedScroll.addEventListener('mouseenter', stopAutoScroll);
         relatedScroll.addEventListener('mouseleave', startAutoScroll);
     </script>
