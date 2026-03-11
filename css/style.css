@@ -271,10 +271,16 @@ h6,
     max-width: 100%;
 }
 @media (max-width: 768px){
+    .banner_pg_i{
+        padding-left: 44px;
+    }
     .img_footer{
         width: 85%;
         display: block;
         margin: 0 auto;
+    }
+    .footer_address{
+        padding-left: 23px;
     }
 }
 .ft_social {
@@ -377,7 +383,7 @@ h6,
     min-height: 600px;
 }
 .banner-row .image-col .slide_img_2{
-    background-image: url('../img/carousel-3.jpg');
+    background-image: url('../img/banner/slider022.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
