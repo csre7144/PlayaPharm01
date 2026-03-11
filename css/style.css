@@ -267,8 +267,15 @@ h6,
 }
 
 .img_footer{
+
     max-width: 100%;
-    height: auto;
+}
+@media (max-width: 768px){
+    .img_footer{
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+    }
 }
 .ft_social {
     padding-left: 20px;   /* mobile */
