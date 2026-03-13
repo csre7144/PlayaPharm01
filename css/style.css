@@ -383,7 +383,7 @@ h6,
     min-height: 600px;
 }
 .banner-row .image-col .slide_img_2{
-    background-image: url('../img/banner/slider024.jpg');
+    background-image: url('../img/banner/home_banner.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -391,7 +391,7 @@ h6,
 }
 @media screen and (max-width: 480px) {
     .banner-row .image-col .slide_img_1, .banner-row .image-col .slide_img_2{
-        min-height: 250px;
+        min-height: 300px;
         /* margin-top: 3rem; */
         max-width: 100%;
         object-fit: cover;
