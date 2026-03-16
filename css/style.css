@@ -375,19 +375,29 @@ h6,
 .banner-row .image-col{
     width: 100%;
 }
+.text-col{
+    display: flex;
+}
+
+.carousel_ppg{
+    margin-top: 100px; /* adjust spacing from top if needed */
+}
+
+
 .banner-row .image-col .slide_img_1{
     background-image: url('../img/banner/slider0001.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    /* background-position: center center; */
+    background-position: 20% 10%; /* X% Y% */
     background-size: cover;
-    min-height: 600px;
+    min-height: 700px;
 }
 .banner-row .image-col .slide_img_2{
     background-image: url('../img/banner/home_banner.jpeg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 20% 10%; /* X% Y% */
     background-size: cover;
-    min-height: 600px;
+    min-height: 700px;
 }
 @media screen and (max-width: 480px) {
     .banner-row .image-col .slide_img_1, .banner-row .image-col .slide_img_2{
@@ -419,10 +429,10 @@ h6,
         padding: 20px !important;
     }
 }
-.banner-row .text-col {
+/* .banner-row .text-col {
     padding: 40px;
     
-}
+} */
 
 .compound_about button{
     margin-bottom: 50px;
@@ -451,6 +461,10 @@ h6,
     .compound_about .compound_about_paragraph img{
         padding-bottom: 20px;
     }
+    .carousel_ppg{
+        margin-top: 0px; /* adjust spacing from top if needed */
+        padding: 0 20px;
+}
 }
 
 /* Small mobile screens (≤ 576px) */
