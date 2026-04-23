@@ -579,3 +579,29 @@ h6,
         height: 300px;
     }
 }
+
+/* Award Banner */
+.bannerbg2{
+    background-color: #eef9ff;
+}
+.bannerbg2 .row{
+    text-align: center;
+    align-items: center;
+}
+
+.bannerbg2 .bannerbg2_img img{
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 991px){
+    .bannerbg2 .bannerbg2_p{
+        padding-bottom: 20px;
+    }
+    .bannerbg2 .bannerbg2_img img{
+        width: 250px;
+    }
+}
+/* End Award Banner */
